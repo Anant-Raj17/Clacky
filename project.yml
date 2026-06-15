@@ -12,7 +12,7 @@ configs:
 
 settings:
   base:
-    MARKETING_VERSION: "0.1.2"
+    MARKETING_VERSION: "0.2.0"
     CURRENT_PROJECT_VERSION: "3"
     SWIFT_VERSION: "5.10"
     ENABLE_HARDENED_RUNTIME: YES
@@ -76,7 +76,7 @@ targets:
         # before the first updatable release (see docs/UPDATES.md), or update
         # checks will fail signature verification.
         SUFeedURL: "https://jasonzh0.github.io/Clacky/appcast.xml"
-        SUPublicEDKey: "REPLACE_WITH_SPARKLE_PUBLIC_ED_KEY"
+        SUPublicEDKey: "XgEJRGLTZc63fJe4MteEknxUf7N1QLWrGSkui9/QCU8="
     entitlements:
       path: Clacky/Clacky.entitlements
       properties:
