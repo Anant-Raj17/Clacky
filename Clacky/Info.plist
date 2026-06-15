@@ -28,5 +28,9 @@
 	<string>Clacky needs Accessibility access to detect keystrokes globally so it can play sounds as you type. It does not record or store what you type.</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Released under the MIT License.</string>
+	<key>SUFeedURL</key>
+	<string>https://jasonzh0.github.io/Clacky/appcast.xml</string>
+	<key>SUPublicEDKey</key>
+	<string>REPLACE_WITH_SPARKLE_PUBLIC_ED_KEY</string>
 </dict>
 </plist>

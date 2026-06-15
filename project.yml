@@ -35,6 +35,15 @@ settings:
       DEVELOPMENT_TEAM: ""
       OTHER_CODE_SIGN_FLAGS: "--timestamp"
 
+packages:
+  # Sparkle powers in-place auto-updates. Replacing Clacky at its existing
+  # install path preserves its Developer ID code-signing identity, so macOS
+  # (TCC) keeps the user's granted Accessibility permission — no re-granting
+  # after an update.
+  Sparkle:
+    url: https://github.com/sparkle-project/Sparkle
+    from: "2.6.0"
+
 targets:
   Clacky:
     type: application
@@ -61,10 +70,19 @@ targets:
         LSUIElement: true
         NSHumanReadableCopyright: "Released under the MIT License."
         NSAccessibilityUsageDescription: "Clacky needs Accessibility access to detect keystrokes globally so it can play sounds as you type. It does not record or store what you type."
+        # Sparkle auto-update. The feed is hosted on GitHub Pages; its enclosures
+        # point at the versioned release ZIPs. SUPublicEDKey MUST be replaced
+        # with the EdDSA public key printed by Sparkle's `generate_keys` tool
+        # before the first updatable release (see docs/UPDATES.md), or update
+        # checks will fail signature verification.
+        SUFeedURL: "https://jasonzh0.github.io/Clacky/appcast.xml"
+        SUPublicEDKey: "REPLACE_WITH_SPARKLE_PUBLIC_ED_KEY"
     entitlements:
       path: Clacky/Clacky.entitlements
       properties:
         com.apple.security.app-sandbox: false
+    dependencies:
+      - package: Sparkle
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.clacky.Clacky
