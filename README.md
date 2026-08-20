@@ -97,6 +97,7 @@ Clacky/
   System/LaunchAtLogin.swift
   System/AppDelegate.swift     # reopen → Settings when the icon is hidden
   System/SettingsOpener.swift
+  System/SettingsWindowController.swift
   UI/
     MenuBarContent.swift
     SettingsView.swift

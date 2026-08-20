@@ -24,12 +24,5 @@ struct ClackyApp: App {
             Label("Clacky", systemImage: preferences.isEnabled ? "keyboard.fill" : "keyboard")
         }
         .menuBarExtraStyle(.menu)
-
-        Settings {
-            SettingsView()
-                .environment(controller)
-                .environment(preferences)
-                .frame(minWidth: 480, minHeight: 360)
-        }
     }
 }
