@@ -65,6 +65,10 @@ struct MenuBarContent: View {
         }
         .keyboardShortcut(",")
 
+        Button("Hide Menu Bar Icon") {
+            prefs.showMenuBarIcon = false
+        }
+
         Divider()
 
         Button("Quit Clacky") {
