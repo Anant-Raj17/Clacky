@@ -55,10 +55,6 @@ struct MenuBarContent: View {
             }
         }
 
-        Button("Check for Updates…") {
-            UpdaterController.shared.checkForUpdates()
-        }
-
         Button("Settings…") {
             SettingsOpener.open()
         }
