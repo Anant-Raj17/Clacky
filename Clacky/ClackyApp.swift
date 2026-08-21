@@ -8,9 +8,6 @@ struct ClackyApp: App {
 
     init() {
         AppController.shared.start()
-        // Instantiate the Sparkle updater so its scheduled background update
-        // checks begin (the singleton starts the updater in its initializer).
-        _ = UpdaterController.shared
     }
 
     var body: some Scene {
